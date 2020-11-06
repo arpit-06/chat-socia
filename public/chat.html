@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>ChatCord App</title>
+  <style>
+      .container{
+          box-shadow: 5px 5px 5px 5px gray;
+      }
+      #chat-messages{
+        display:block;
+            padding:5px;
+            margin-top:5px;
+            width:300px;
+            height:600px;
+            overflow:auto;
+      }
+  </style>
+</head>
+<body>
+    <div class="container mt-5 rounded">
+        <header class="bg-primary row p-3">
+          <h1 class="text-white col-md-10"><i class="fas fa-smile"></i> ChatCord</h1>
+          <a href="index.html" class="btn btn-light btn-lg col-md-2">LEAVE ROOM</a>
+        </header>
+        <main class="row">
+            <div class="col-md-3 pt-3 text-white" style="background-color: rgb(4, 154, 247);">
+                <h3><i class="fas fa-comments"></i> Room Name:</h3>
+                <input type="text" class="form-control w-75 ml-4" id="room-name" readonly><br>
+                <h3><i class="fas fa-users"></i> Users</h3>
+                <ul class="list-group" id="users"></ul>
+                  <br><br>
+            </div>
+            <div class="col-md-9" id="chat-messages">
+                
+            </div>
+        </main>
+            <form id="chat-form" class="row bg-primary p-3">
+                <textarea
+                  id="msg"
+                  type="text"
+                  placeholder="Enter Your Message Here  .  .  .  .  . "
+                  required
+                  class="form-control col-md-9"
+                  autocomplete="off"></textarea>&emsp;&emsp;&emsp;;
+                <button class="btn btn-light btn-lg col-md-2 rounded"><i class="fas fa-paper-plane"></i> SEND</button>
+              </form>
+    </div>
+
+
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js" integrity="sha512-BHtomM5XDcUy7tDNcrcX1Eh0RogdWiMdXl3wJcKB3PFekXb3l5aDzymaTher61u6vEZySnoC/SAj2Y/p918Y3w==" crossorigin="anonymous"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="hps:/tt/cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
